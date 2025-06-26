@@ -1,0 +1,259 @@
+{
+  "welcome": "Bienvenido",
+  "language": "Idioma",
+  "currency": "Moneda",
+  "price": "Precio",
+  "product_name": "Nombre del producto",
+  "add_to_cart": "Añadir al carrito",
+
+  "shop": "Comprar",
+  "bestsellers": "Más vendidos",
+  "contact": "Contacto",
+  "about_us": "Sobre nosotros",
+
+  "skincare": "Cuidado de la piel",
+  "bath_and_body": "Baño y cuerpo",
+  "by_concern": "Por preocupación",
+
+  "serums": "Sérums",
+  "oils": "Aceites",
+  "cleansers": "Limpiadores",
+  "eye_creams": "Cremas para ojos",
+  "moisturizers": "Hidratantes",
+  "lip_care": "Cuidado de labios",
+
+  "bath_body": "Baño + Cuerpo",
+  "scrubs": "Exfoliantes",
+  "body_moisturizers": "Hidratantes corporales",
+  "soaps": "Jabones",
+  "all": "Todos",
+  "new": "Nuevo",
+  "sets": "Conjuntos",
+
+  "fine_lines": "Líneas finas",
+  "dullness": "Opacidad y manchas oscuras",
+  "dryness": "Sequedad",
+  "acne": "Acné",
+  "redness": "Enrojecimiento",
+
+  "shop_all": "Comprar todo",
+  "new_arrivals": "Novedades",
+  "sets_bundles": "Conjuntos + Paquetes",
+
+  "shop_bestsellers": "Comprar los más vendidos",
+  "new_tremella": "¡Nuevo! Tremella Gel Cream",
+
+  "lightweight_hydration": "Hidratación ligera",
+  "brightening_collection": "Colección iluminadora",
+  
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "admin": "Administrador"
+  },
+  "cart": {
+    "yourCart": "TU CARRITO",
+    "empty": "Tu carrito está vacío.",
+    "continueShopping": "CONTINUAR COMPRANDO",
+    "promo": "Obtén una crema de ojos gratis con cualquier pedido de serum. Solo añade ambos al carrito y usa el código EYECREAM.",
+    "decreaseQuantity": "Disminuir cantidad de {{title}}",
+    "increaseQuantity": "Aumentar cantidad de {{title}}",
+    "removeItem": "Eliminar {{title}} del carrito",
+    "subtotal": "Subtotal",
+    "item": "artículo",
+    "items": "artículos",
+    "checkout": "PAGAR",
+    "viewCart": "VER CARRITO"
+  },
+  
+  "scroll": {
+    "cLeanBeauty": "BELLEZA LIMPIA",
+    "hydration": "HIDRATACIÓN",
+    "glowingSkin": "PIEL RADIANTE",
+    "plantBased": "A BASE DE PLANTAS",
+    "ninetyNinePercentNatural": "99% NATURAL",
+    "naturalIngredients": "INGREDIENTES NATURALES",
+    "sustainable": "SOSTENIBLE",
+    "vegan": "VEGANO",
+    "ecoConscious": "ECOLÓGICO",
+    "organicFormulas": "FÓRMULAS ORGÁNICAS",
+    "awardWinning": "GANADOR DE PREMIOS",
+    "parabenFree": "SIN PARABENOS"
+  }
+,
+
+  "feature": {
+    "alt": "Conjunto de Esenciales de Hidratación",
+    "limitedEdition": "EDICIÓN LIMITADA",
+    "titleLine1": "ESENCIALES DE HIDRATACIÓN",
+    "titleLine2": "CONJUNTO",
+    "savePercent": "Ahorra 20%",
+    "description": "en este trío hidratante para una piel radiante y tersa—más una bolsa de ballet de tul rosa edición limitada gratis.",
+    "shopNow": "COMPRAR AHORA"
+  },
+  
+  "bestseller": {
+    "loading": "Cargando los más vendidos...",
+    "title": "LOS MÁS VENDIDOS",
+    "currentCurrency": "Moneda actual: {{currency}}",
+    "priceSymbol": "€",
+    "addToCart": "AÑADIR AL CARRITO"
+  }
+,
+
+  "about": {
+    "alt": "Sobre Nosotros",
+    "title": "SOBRE NOSOTROS",
+    "headingLine1": "LAS PLANTAS SON",
+    "headingLine2": "NUESTRO ASUNTO",
+    "description": "Usamos un 99% de ingredientes naturales en nuestras fórmulas, obteniendo activos que aprovechan el poder del reino vegetal rico en nutrientes.",
+    "button": "NUESTRA FILOSOFÍA"
+  }
+,
+"heading" : "Cuidado de la piel y el cuerpo aprobado por editores"
+
+,
+
+  "newsletter": {
+    "heading": "REGÍSTRATE PARA OBTENER UN 15% DE DESCUENTO",
+    "description": "Obtén un 15% de descuento en tu primer pedido, además de acceso a nuevos lanzamientos, consejos de productos y ofertas exclusivas.",
+    "emailPlaceholder": "Correo electrónico",
+    "button": "REGÍSTRATE"
+  },
+  
+  "footer": {
+    "tagline": "Impulsado por plantas, clínicamente efectivo",
+    "sections": {
+      "shop": "TIENDA",
+      "shopLinks": {
+        "shopAll": "Comprar todo",
+        "bestsellers": "Más vendidos",
+        "skincare": "Cuidado de la piel",
+        "bathBody": "Baño + Cuerpo",
+        "setsBundles": "Sets + Paquetes"
+      },
+      "about": "SOBRE NOSOTROS",
+      "aboutLinks": {
+        "aboutUs": "Sobre nosotros",
+        "blog": "Blog: Naturally Speaking"
+      },
+      "customerService": "ATENCIÓN AL CLIENTE",
+      "customerLinks": {
+        "faqs": "Preguntas frecuentes",
+        "returns": "Devoluciones",
+        "contact": "Contáctanos"
+      },
+      "account": "CUENTA",
+      "accountLinks": {
+        "myAccount": "Mi cuenta"
+      }
+    },
+    "legal": {
+      "copyright": "© 2025 Herbivore Botanicals, LLC. Todos los derechos reservados.",
+      "privacyPolicy": "Política de privacidad",
+      "termsOfService": "Términos de servicio",
+      "accessibility": "Accesibilidad"
+    }
+  },
+  
+  "login": "INICIAR SESIÓN",
+  "signup": "REGISTRARSE",
+  "pleaseFill": "Por favor complete la información a continuación:",
+  "enterEmailPassword": "Ingrese su correo electrónico y contraseña para iniciar sesión:",
+  "firstName": "Nombre",
+  "lastName": "Apellido",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "createAccount": "CREAR CUENTA",
+  "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+  "loginBtn": "Iniciar sesión",
+  "dontHaveAccount": "¿No tienes una cuenta?",
+  "signUpBtn": "Regístrate",
+  "invalidEmailOrPassword": "Correo electrónico o contraseña inválidos",
+  "registrationSuccess": "¡Registro exitoso! Por favor inicia sesión.",
+
+
+
+  "carts": {
+    "yourCart": "TU CARRITO",
+    "empty": "Tu carrito está vacío.",
+    "product": "PRODUCTO",
+    "quantity": "CANTIDAD",
+    "total": "TOTAL",
+    "decreaseQuantity": "Disminuir cantidad de {{title}}",
+    "increaseQuantity": "Aumentar cantidad de {{title}}",
+    "removeItem": "Eliminar {{title}} del carrito",
+    "totalItems": "Artículos totales",
+    "totalPrice": "Precio total",
+    "taxesShipping": "Impuestos y envío calculados al finalizar la compra",
+    "checkout": "PAGAR"
+  },
+  "error": {
+    "fetchCartFailed": "Error al obtener los artículos del carrito:",
+    "removeFailed": "Error al eliminar el artículo:",
+    "updateQuantityFailed": "Error al actualizar la cantidad:"
+  }
+,
+
+  "checkout": {
+    "title": "Pagar",
+    "contact": "Contacto",
+    "emailPlaceholder": "Dirección de correo",
+    "delivery": "Envio",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "address": "Dirección",
+    "apt": "Apartamento, suite, etc. (opcional)",
+    "city": "Ciudad",
+    "state": "Estado/Provincia",
+    "postal": "Código postal",
+    "country": "País",
+    "cartEmpty": "Tu carrito está vacío.",
+    "totalLabel": "Total",
+    "completeOrder": "COMPLETAR PEDIDO"
+  },
+  "errors": {
+    "fetchCartFailed": "Error al obtener los artículos del carrito:"
+  }
+,
+
+  "contacts": {
+    "title": "CONTÁCTANOS",
+    "orderStatus": "¿Buscas actualización del estado del pedido?",
+    "spamNotice": "¡Revisa tu carpeta de spam/promociones! A veces los mensajes llegan ahí por error.",
+    "emailPrompt": "Para contactarnos, envía un correo a una de las siguientes direcciones o completa el formulario:",
+    "responseTime": "Por favor allow 5–7 días hábiles (L–V). Respondemos en el orden recibido. ¡Gracias!",
+    "generalLabel": "PREGUNTAS O COMENTARIOS GENERALES",
+    "generalEmail": "info@herbivorebotanicals.com",
+    "pressLabel": "CONSULTAS DE PRENSA / PR",
+    "pressEmail": "pr@herbivorebotanicals.com",
+    "wholesaleLabel": "MAYORISTAS",
+    "wholesaleEmail": "wholesale@herbivorebotanicals.com",
+    "namePlaceholder": "Nombre",
+    "emailPlaceholder": "Correo electrónico",
+    "messagePlaceholder": "Mensaje",
+    "sending": "ENVIANDO…",
+    "sendMessage": "ENVIAR MENSAJE",
+    "validationError": "Por favor completa todos los campos.",
+    "success": "¡Tu mensaje ha sido enviado! Nos comunicaremos pronto.",
+    "error": "Error al enviar el mensaje. Intenta nuevamente más tarde."
+  },
+  "about.title": "Sobre Nosotros",
+  "about.intro": "Bienvenido a Herbivore Botanicals, donde el poder de los activos botánicos impulsa nuestras fórmulas de cuidado de la piel clínicamente probadas para sanar, proteger y nutrir tu piel, mente y cuerpo—naturalmente.",
+  "about.description": "Combinamos cuidadosamente ingredientes botánicos potentes con fragancias vegetales naturales y mantecas y aceites indulgentes para crear texturas y aromas lujosos. Nuestro objetivo es que realmente disfrutes tu rutina de cuidado de la piel, sin comprometer la efectividad.",
+  "about.button": "SIENTE LA DIFERENCIA"
+,
+
+  "all_bestsellers": "TOUS LES MEILLEURS VENTES",
+  "phoenix_oil": "PHOENIX Huile Faciale de Renouvellement Profond",
+  "nova_serum": "NOVA Sérum Éclaircissant à 15% Vitamine C + Curcuma",
+  "lapis_oil": "LAPIS Huile Faciale Équilibrante",
+  "moon_fruit_serum": "MOON FRUIT Sérum Alternative au Rétinol avec 1% Bakuchiol + Peptides"
+
+
+
+
+
+}

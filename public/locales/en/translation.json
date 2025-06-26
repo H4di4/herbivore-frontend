@@ -1,0 +1,261 @@
+{
+  "welcome": "Welcome",
+  "language": "Language",
+  "currency": "Currency",
+  "price": "Price",
+  "product_name": "Product Name",
+  "add_to_cart": "Add to Cart",
+
+  "shop": "SHOP",
+  "bestsellers": "BESTSELLERS",
+  "contact": "CONTACT",
+  "about_us": "ABOUT US",
+
+  "skincare": "Skincare",
+  "bath_and_body": "Bath and Body",
+  "by_concern": "BY CONCERN",
+
+  "serums": "Serums",
+  "oils": "Oils",
+  "cleansers": "Cleansers",
+  "eye_creams": "Eye Creams",
+  "moisturizers": "Moisturizers",
+  "lip_care": "Lip Care",
+
+  "bath_body": "Bath + Body",
+  "scrubs": "Scrubs",
+  "body_moisturizers": "Body Moisturizers",
+  "soaps": "Soaps",
+  "all": "All",
+  "new": "New",
+  "sets": "Sets",
+
+  "fine_lines": "Fine Lines",
+  "dullness": "Dullness and Dark Spots",
+  "dryness": "Dryness",
+  "acne": "Acne",
+  "redness": "Redness",
+
+  "shop_all": "Shop All",
+  "new_arrivals": "New Arrivals",
+  "sets_bundles": "Sets + Bundles",
+
+  "shop_bestsellers": "Shop Bestsellers",
+  "new_tremella": "New! Tremella Gel Cream",
+
+  "lightweight_hydration": "Lightweight Hydration",
+  "brightening_collection": "Brightening Collection",
+ 
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "cart": {
+    "yourCart": "YOUR CART",
+    "empty": "Your cart is empty.",
+    "continueShopping": "CONTINUE SHOPPING",
+    "promo": "Get a free eye cream with any serum order. Just add both to cart & use code EYECREAM.",
+    "decreaseQuantity": "Decrease quantity of {{title}}",
+    "increaseQuantity": "Increase quantity of {{title}}",
+    "removeItem": "Remove {{title}} from cart",
+    "subtotal": "Subtotal",
+    "item": "item",
+    "items": "items",
+    "checkout": "CHECKOUT",
+    "viewCart": "VIEW CART"
+  }
+,
+
+  "scroll": {
+    "cLeanBeauty": "CLEAN BEAUTY",
+    "hydration": "HYDRATION",
+    "glowingSkin": "GLOWING SKIN",
+    "plantBased": "PLANT-BASED",
+    "ninetyNinePercentNatural": "99% NATURAL",
+    "naturalIngredients": "NATURAL INGREDIENTS",
+    "sustainable": "SUSTAINABLE",
+    "vegan": "VEGAN",
+    "ecoConscious": "ECO CONSCIOUS",
+    "organicFormulas": "ORGANIC FORMULAS",
+    "awardWinning": "AWARD WINNING",
+    "parabenFree": "PARABEN FREE"
+  },
+  
+  "feature": {
+    "alt": "Hydration Essentials Set",
+    "limitedEdition": "LIMITED EDITION",
+    "titleLine1": "HYDRATION ESSENTIALS",
+    "titleLine2": "SET",
+    "savePercent": "Save 20%",
+    "description": "on this hydrating trio for plump, glowing skin—plus a free limited edition pink tulle ballet bag.",
+    "shopNow": "SHOP NOW"
+  }
+,
+
+  "bestseller": {
+    "loading": "Loading bestsellers...",
+    "title": "BESTSELLERS",
+    "currentCurrency": "Current currency: {{currency}}",
+    "priceSymbol": "$",
+    "addToCart": "ADD TO CART"
+  }
+,
+
+  "about": {
+    "alt": "About Us",
+    "title": "ABOUT US",
+    "headingLine1": "PLANTS ARE OUR",
+    "headingLine2": "THING",
+    "description": "We use 99% natural ingredients in our formulas, sourcing\nactives that harness the power of the nutrient-rich plant\nkingdom.",
+    "button": "OUR PHILOSOPHY"
+  }
+  ,
+  "heading" : "Editor-approved skin + bodycare"
+ ,
+ 
+  "newsletter": {
+    "heading": "SIGN UP FOR 15% OFF",
+    "description": "Get 15% off your first order plus access to new drops, product tips, and exclusive offers.",
+    "emailPlaceholder": "E-mail",
+    "button": "SIGN UP"
+  },
+  
+  "footer": {
+    "tagline": "Plant powered, clinically effective",
+    "sections": {
+      "shop": "SHOP",
+      "shopLinks": {
+        "shopAll": "Shop All",
+        "bestsellers": "Bestsellers",
+        "skincare": "Skincare",
+        "bathBody": "Bath + Body",
+        "setsBundles": "Sets + Bundles"
+      },
+      "about": "ABOUT",
+      "aboutLinks": {
+        "aboutUs": "About Us",
+        "blog": "Blog: Naturally Speaking"
+      },
+      "customerService": "CUSTOMER SERVICE",
+      "customerLinks": {
+        "faqs": "FAQs",
+        "returns": "Returns",
+        "contact": "Contact Us"
+      },
+      "account": "ACCOUNT",
+      "accountLinks": {
+        "myAccount": "My Account"
+      }
+    },
+    "legal": {
+      "copyright": "© 2025 Herbivore Botanicals, LLC. All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "accessibility": "Accessibility"
+    }
+  },
+  
+  "login": "LOGIN",
+  "signup": "SIGN UP",
+  "pleaseFill": "Please fill in the information below:",
+  "enterEmailPassword": "Enter your email and password to login:",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "E-mail",
+  "password": "Password",
+  "createAccount": "CREATE ACCOUNT",
+  "alreadyHaveAccount": "Already have an account?",
+  "loginBtn": "Login",
+  "dontHaveAccount": "Don't have an account?",
+  "signUpBtn": "Sign up",
+  "invalidEmailOrPassword": "Invalid email or password",
+  "registrationSuccess": "Registration successful! Please log in.",
+  
+  "carts": {
+    "yourCart": "YOUR CART",
+    "empty": "Your cart is empty.",
+    "product": "PRODUCT",
+    "quantity": "QUANTITY",
+    "total": "TOTAL",
+    "decreaseQuantity": "Decrease quantity of {{title}}",
+    "increaseQuantity": "Increase quantity of {{title}}",
+    "removeItem": "Remove {{title}} from cart",
+    "totalItems": "Total Items",
+    "totalPrice": "Total Price",
+    "taxesShipping": "Taxes and shipping calculated at checkout",
+    "checkout": "CHECKOUT"
+  },
+  "error": {
+    "fetchCartFailed": "Failed to fetch cart items:",
+    "removeFailed": "Failed to remove item:",
+    "updateQuantityFailed": "Failed to update quantity:"
+  }
+
+,
+
+  "checkout": {
+    "title": "Checkout",
+    "contact": "Contact",
+    "emailPlaceholder": "Email address",
+    "delivery": "Delivery",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "address": "Address",
+    "apt": "Apartment, suite, etc. (optional)",
+    "city": "City",
+    "state": "State/Province",
+    "postal": "Postal Code",
+    "country": "Country",
+    "cartEmpty": "Your cart is empty.",
+    "totalLabel": "Total",
+    "completeOrder": "COMPLETE ORDER"
+  },
+  "errors": {
+    "fetchCartFailed": "Failed to fetch cart items:"
+  },
+  
+  "contacts": {
+    "title": "CONTACT US",
+    "orderStatus": "Looking for an order status update?",
+    "spamNotice": "Check your spam/junk or promotions folder! Our messages are sometimes routed there by mistake.",
+    "emailPrompt": "To contact us, please email one of the following addresses, or fill out the form below.",
+    "responseTime": "We kindly request 5‑7 business days (M‑F) to receive a response from our team and appreciate your patience. We respond in the order messages are received. Thank you!",
+    "generalLabel": "GENERAL QUESTIONS OR COMMENTS",
+    "generalEmail": "info@herbivorebotanicals.com",
+    "pressLabel": "PRESS / PR INQUIRIES",
+    "pressEmail": "pr@herbivorebotanicals.com",
+    "wholesaleLabel": "WHOLESALE",
+    "wholesaleEmail": "wholesale@herbivorebotanicals.com",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "E‑mail",
+    "messagePlaceholder": "Message",
+    "sending": "SENDING…",
+    "sendMessage": "SEND MESSAGE",
+    "validationError": "Please fill out all fields.",
+    "success": "Your message has been sent! We will get back to you soon.",
+    "error": "Failed to send message. Please try again later."
+  },
+
+  "about.title": "About Us",
+  "about.intro": "Welcome to Herbivore Botanicals, where the potency of botanical actives drive our clinically proven skincare formulas to heal, protect, and nourish your skin, mind, and body—naturally.",
+  "about.description": "We thoughtfully combine potent botanical ingredients with natural plant-based fragrances and indulgent natural butters and oils to create luxurious textures and scents. Our goal is for you to truly enjoy your skincare and bathing rituals—without ever having to compromise on effectiveness.",
+  "about.button": "FEEL THE DIFFERENCE"
+
+,
+
+  "all_bestsellers": "ALL BESTSELLERS",
+  "phoenix_oil": "PHOENIX Deep Renewal Facial Oil",
+  "nova_serum": "NOVA 15% Vitamin C + Turmeric Brightening Serum",
+  "lapis_oil": "LAPIS Balancing Facial Oil",
+  "moon_fruit_serum": "MOON FRUIT 1% Bakuchiol + Peptides Retinol Alternative Serum"
+
+
+
+
+
+
+
+}

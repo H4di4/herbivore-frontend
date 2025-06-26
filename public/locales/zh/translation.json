@@ -1,0 +1,261 @@
+{
+  "welcome": "欢迎",
+  "language": "语言",
+  "currency": "货币",
+  "price": "价格",
+  "product_name": "产品名称",
+  "add_to_cart": "加入购物车",
+
+  "shop": "购物",
+  "bestsellers": "畅销产品",
+  "contact": "联系我们",
+  "about_us": "关于我们",
+
+  "skincare": "护肤",
+  "bath_and_body": "沐浴和身体",
+  "by_concern": "按问题分类",
+
+  "serums": "精华液",
+  "oils": "护肤油",
+  "cleansers": "洁面",
+  "eye_creams": "眼霜",
+  "moisturizers": "保湿霜",
+  "lip_care": "唇部护理",
+
+  "bath_body": "沐浴 + 身体",
+  "scrubs": "磨砂膏",
+  "body_moisturizers": "身体保湿霜",
+  "soaps": "香皂",
+  "all": "全部",
+  "new": "新品",
+  "sets": "套装",
+
+  "fine_lines": "细纹",
+  "dullness": "暗沉和黑斑",
+  "dryness": "干燥",
+  "acne": "痘痘",
+  "redness": "泛红",
+
+  "shop_all": "全部购买",
+  "new_arrivals": "新品上市",
+  "sets_bundles": "套装 + 组合",
+
+  "shop_bestsellers": "购买畅销产品",
+  "new_tremella": "新品！银耳啫喱面霜",
+
+  "lightweight_hydration": "轻盈保湿",
+  "brightening_collection": "亮肤系列",
+  
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "blog": "博客",
+    "contact": "联系",
+    "admin": "管理员"
+  },
+  
+  "cart": {
+    "yourCart": "您的购物车",
+    "empty": "您的购物车是空的。",
+    "continueShopping": "继续购物",
+    "promo": "购买任何精华液订单即送免费眼霜。只需将两者加入购物车并使用优惠码 EYECREAM。",
+    "decreaseQuantity": "减少 {{title}} 的数量",
+    "increaseQuantity": "增加 {{title}} 的数量",
+    "removeItem": "从购物车中移除 {{title}}",
+    "subtotal": "小计",
+    "item": "件商品",
+    "items": "件商品",
+    "checkout": "结账",
+    "viewCart": "查看购物车"
+  },
+  
+  "scroll": {
+    "cLeanBeauty": "纯净美丽",
+    "hydration": "保湿",
+    "glowingSkin": "焕发光彩的肌肤",
+    "plantBased": "植物基",
+    "ninetyNinePercentNatural": "99% 天然",
+    "naturalIngredients": "天然成分",
+    "sustainable": "可持续",
+    "vegan": "纯素",
+    "ecoConscious": "环保意识",
+    "organicFormulas": "有机配方",
+    "awardWinning": "获奖",
+    "parabenFree": "无防腐剂"
+  }
+,
+
+  "feature": {
+    "alt": "保湿必备套装",
+    "limitedEdition": "限量版",
+    "titleLine1": "保湿必备",
+    "titleLine2": "套装",
+    "savePercent": "节省20%",
+    "description": "这款保湿三件套让肌肤饱满光彩 — 还赠送限量版粉色薄纱芭蕾包。",
+    "shopNow": "立即购买"
+  }
+
+,
+
+  "bestseller": {
+    "loading": "正在加载畅销产品...",
+    "title": "畅销产品",
+    "currentCurrency": "当前货币：{{currency}}",
+    "priceSymbol": "¥",
+    "addToCart": "加入购物车"
+  },
+  
+  "about": {
+    "alt": "关于我们",
+    "title": "关于我们",
+    "headingLine1": "植物是我们的",
+    "headingLine2": "专长",
+    "description": "我们的配方中使用了99%的天然成分，采用能够利用富含营养植物王国力量的活性成分。",
+    "button": "我们的理念"
+  },
+"heading" : "编辑推荐的皮肤与身体护理",
+
+  "newsletter": {
+    "heading": "注册可享受15%折扣",
+    "description": "首次订购享受15%折扣，并获得新品、产品技巧和独家优惠的访问权限。",
+    "emailPlaceholder": "电子邮件",
+    "button": "注册"
+  },
+  
+  "footer": {
+    "tagline": "植物力量，临床有效",
+    "sections": {
+      "shop": "购物",
+      "shopLinks": {
+        "shopAll": "全部商品",
+        "bestsellers": "畅销产品",
+        "skincare": "护肤",
+        "bathBody": "沐浴 + 身体",
+        "setsBundles": "套装 + 捆绑"
+      },
+      "about": "关于我们",
+      "aboutLinks": {
+        "aboutUs": "关于我们",
+        "blog": "博客：Naturally Speaking"
+      },
+      "customerService": "客户服务",
+      "customerLinks": {
+        "faqs": "常见问题",
+        "returns": "退货",
+        "contact": "联系我们"
+      },
+      "account": "账户",
+      "accountLinks": {
+        "myAccount": "我的账户"
+      }
+    },
+    "legal": {
+      "copyright": "© 2025 Herbivore Botanicals, LLC。版权所有。",
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款",
+      "accessibility": "无障碍"
+    }
+  }
+,
+
+  "signup": "注册",
+  "login": "登录",
+  "pleaseFill": "请填写以下信息：",
+  "enterEmailPassword": "请输入您的电子邮件和密码登录：",
+  "invalidEmailOrPassword": "无效的电子邮件或密码",
+  "registrationSuccess": "注册成功！请登录。",
+  "registrationFailed": "注册失败",
+  "firstName": "名字",
+  "lastName": "姓氏",
+  "email": "电子邮件",
+  "password": "密码",
+  "createAccount": "创建账户",
+  "loginBtn": "登录",
+  "alreadyHaveAccount": "已有账户？",
+  "dontHaveAccount": "没有账户？",
+  "signUpBtn": "注册",
+  
+  "carts": {
+    "yourCart": "您的购物车",
+    "empty": "您的购物车为空。",
+    "product": "产品",
+    "quantity": "数量",
+    "total": "总计",
+    "decreaseQuantity": "减少{{title}}的数量",
+    "increaseQuantity": "增加{{title}}的数量",
+    "removeItem": "从购物车中移除{{title}}",
+    "totalItems": "商品总数",
+    "totalPrice": "总价",
+    "taxesShipping": "税费和运费将在结账时计算",
+    "checkout": "结账"
+  },
+  "error": {
+    "fetchCartFailed": "获取购物车商品失败：",
+    "removeFailed": "移除商品失败：",
+    "updateQuantityFailed": "更新数量失败："
+  }
+,
+
+  "checkout": {
+    "title": "结账",
+    "contact": "联系方式",
+    "emailPlaceholder": "电子邮件地址",
+    "delivery": "配送",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "address": "地址",
+    "apt": "公寓、套件等（可选）",
+    "city": "城市",
+    "state": "州/省",
+    "postal": "邮编",
+    "country": "国家",
+    "cartEmpty": "您的购物车为空。",
+    "totalLabel": "总计",
+    "completeOrder": "完成订单"
+  },
+  "errors": {
+    "fetchCartFailed": "获取购物车商品失败："
+  }
+,
+
+  "contacts": {
+    "title": "联系我们",
+    "orderStatus": "需要查看订单状态？",
+    "spamNotice": "请检查垃圾邮件或促销文件夹！有时我们的邮件会被拦截。",
+    "emailPrompt": "联系我们，请发邮件至以下地址，或填写下面表单。",
+    "responseTime": "请留意我们会在 5–7 个工作日（周一至周五）内回复。我们按接收顺序回复。谢谢！",
+    "generalLabel": "常见问题或留言",
+    "generalEmail": "info@herbivorebotanicals.com",
+    "pressLabel": "媒体 / 公关 查询",
+    "pressEmail": "pr@herbivorebotanicals.com",
+    "wholesaleLabel": "批发咨询",
+    "wholesaleEmail": "wholesale@herbivorebotanicals.com",
+    "namePlaceholder": "姓名",
+    "emailPlaceholder": "电子邮件",
+    "messagePlaceholder": "留言内容",
+    "sending": "发送中…",
+    "sendMessage": "发送留言",
+    "validationError": "请填写所有字段。",
+    "success": "您的留言已发送！我们会尽快回复。",
+    "error": "发送失败，请稍后再试。"
+  },
+  
+  "about.title": "关于我们",
+  "about.intro": "欢迎来到Herbivore Botanicals，在这里，植物活性成分的力量推动我们经过临床验证的护肤配方，自然地修复、保护并滋养您的皮肤、心灵和身体。",
+  "about.description": "我们精心将有效的植物成分与天然植物香氛和奢华的天然黄油与油脂结合，打造奢华的质地和香味。我们的目标是让您真正享受护肤和沐浴的每一个仪式时刻——无需在效果上妥协。",
+  "about.button": "感受不同"
+
+
+,
+
+  "all_bestsellers": "所有畅销产品",
+  "phoenix_oil": "PHOENIX 深层焕新面部精油",
+  "nova_serum": "NOVA 15% 维生素C + 姜黄亮肤精华液",
+  "lapis_oil": "LAPIS 平衡面部精油",
+  "moon_fruit_serum": "MOON FRUIT 1% 巴库酚 + 肽类视黄醇替代精华"
+
+
+
+
+
+}

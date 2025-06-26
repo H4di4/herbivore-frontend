@@ -1,0 +1,260 @@
+{
+  "welcome": "مرحبًا",
+  "language": "اللغة",
+  "currency": "العملة",
+  "price": "السعر",
+  "product_name": "اسم المنتج",
+  "add_to_cart": "أضف إلى السلة",
+
+  "shop": "تسوق",
+  "bestsellers": "الأكثر مبيعًا",
+  "contact": "اتصل بنا",
+  "about_us": "معلومات عنا",
+
+  "skincare": "العناية بالبشرة",
+  "bath_and_body": "الاستحمام والجسم",
+  "by_concern": "حسب المشكلة",
+
+  "serums": "الأمصال",
+  "oils": "الزيوت",
+  "cleansers": "المنظفات",
+  "eye_creams": "كريمات العين",
+  "moisturizers": "المرطبات",
+  "lip_care": "العناية بالشفاه",
+
+  "bath_body": "الاستحمام + الجسم",
+  "scrubs": "المقشرات",
+  "body_moisturizers": "مرطبات الجسم",
+  "soaps": "الصابون",
+  "all": "الكل",
+  "new": "جديد",
+  "sets": "مجموعات",
+
+  "fine_lines": "الخطوط الدقيقة",
+  "dullness": "البهتان والبقع الداكنة",
+  "dryness": "الجفاف",
+  "acne": "حب الشباب",
+  "redness": "الاحمرار",
+
+  "shop_all": "تسوق الكل",
+  "new_arrivals": "الوافدون الجدد",
+  "sets_bundles": "مجموعات + حزم",
+
+  "shop_bestsellers": "تسوق الأكثر مبيعًا",
+  "new_tremella": "جديد! كريم جل تريميلا",
+
+  "lightweight_hydration": "ترطيب خفيف",
+  "brightening_collection": "مجموعة التفتيح",
+  
+  "all_bestsellers": "جميع الأكثر مبيعًا",
+  "phoenix_deep_renewal_facial_oil": "فينكس زيت الوجه للتجديد العميق",
+  "nova_15_vitamin_c_turmeric_brightening_serum": "نوفا سيروم التفتيح 15% فيتامين سي + الكركم",
+  "lapis_balancing_facial_oil": "لابيس زيت الوجه المتوازن",
+  "moon_fruit_1_bakuchiol_peptides_retinol_alternative_serum": "مون فروت سيروم بديل الريتينول 1% باكوخيول + ببتيدات",
+
+ 
+  "nav": {
+    "home": "الرئيسية",
+    "about": "معلومات عنا",
+    "blog": "مدونة",
+    "contact": "اتصل بنا",
+    "admin": "المشرف"
+  }
+,
+
+  "cart": {
+    "yourCart": "سلة التسوق الخاصة بك",
+    "empty": "سلة التسوق فارغة.",
+    "continueShopping": "متابعة التسوق",
+    "promo": "احصل على كريم عيون مجاني مع أي طلب سيروم. فقط أضف كلا المنتجين إلى السلة واستخدم الرمز EYECREAM.",
+    "decreaseQuantity": "تقليل كمية {{title}}",
+    "increaseQuantity": "زيادة كمية {{title}}",
+    "removeItem": "إزالة {{title}} من السلة",
+    "subtotal": "المجموع الفرعي",
+    "item": "عنصر",
+    "items": "عناصر",
+    "checkout": "الدفع",
+    "viewCart": "عرض السلة"
+  }
+,
+
+  "scroll": {
+    "cLeanBeauty": "جمال نقي",
+    "hydration": "ترطيب",
+    "glowingSkin": "بشرة متوهجة",
+    "plantBased": "مستخلص من النباتات",
+    "ninetyNinePercentNatural": "99% طبيعي",
+    "naturalIngredients": "مكونات طبيعية",
+    "sustainable": "مستدام",
+    "vegan": "نباتي",
+    "ecoConscious": "واعي بيئيًا",
+    "organicFormulas": "تركيبات عضوية",
+    "awardWinning": "حاصل على جوائز",
+    "parabenFree": "خالٍ من البارابين"
+  },
+  
+  "feature": {
+    "alt": "طقم أساسيات الترطيب",
+    "limitedEdition": "إصدار محدود",
+    "titleLine1": "أساسيات الترطيب",
+    "titleLine2": "طقم",
+    "savePercent": "وفر 20%",
+    "description": "على هذا الطقم المرطب لبشرة ناعمة ومتوهجة — بالإضافة إلى حقيبة باليه وردية من التول إصدار محدود مجانًا.",
+    "shopNow": "تسوق الآن"
+  }
+,
+
+  "bestseller": {
+    "loading": "جارٍ تحميل الأكثر مبيعًا...",
+    "title": "الأكثر مبيعًا",
+    "currentCurrency": "العملة الحالية: {{currency}}",
+    "priceSymbol": "د.إ",
+    "addToCart": "أضف إلى السلة"
+  }
+,
+
+  "about": {
+    "alt": "معلومات عنا",
+    "title": "معلومات عنا",
+    "headingLine1": "النباتات هي",
+    "headingLine2": "اختصاصنا",
+    "description": "نستخدم 99٪ من المكونات الطبيعية في تركيباتنا، معتمدين على المواد الفعالة التي تستغل قوة عالم النباتات الغني بالمغذيات.",
+    "button": "فلسفتنا"
+  }
+,
+"heading" : "العناية بالبشرة والجسم المعتمدة من المحررينs",
+
+  "newsletter": {
+    "heading": "اشترك واحصل على خصم 15٪",
+    "description": "احصل على خصم 15٪ على طلبك الأول بالإضافة إلى الوصول إلى المنتجات الجديدة ونصائح المنتجات والعروض الحصرية.",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "button": "اشترك"
+  },
+  
+  "footer": {
+    "tagline": "مدعوم بالنباتات، فعال سريريًا",
+    "sections": {
+      "shop": "تسوق",
+      "shopLinks": {
+        "shopAll": "تسوق الكل",
+        "bestsellers": "الأكثر مبيعًا",
+        "skincare": "العناية بالبشرة",
+        "bathBody": "الحمام + الجسم",
+        "setsBundles": "المجموعات + الحزم"
+      },
+      "about": "معلومات عنا",
+      "aboutLinks": {
+        "aboutUs": "معلومات عنا",
+        "blog": "مدونة: Naturally Speaking"
+      },
+      "customerService": "خدمة العملاء",
+      "customerLinks": {
+        "faqs": "الأسئلة الشائعة",
+        "returns": "الإرجاع",
+        "contact": "اتصل بنا"
+      },
+      "account": "الحساب",
+      "accountLinks": {
+        "myAccount": "حسابي"
+      }
+    },
+    "legal": {
+      "copyright": "© 2025 Herbivore Botanicals, LLC. جميع الحقوق محفوظة.",
+      "privacyPolicy": "سياسة الخصوصية",
+      "termsOfService": "شروط الخدمة",
+      "accessibility": "سهولة الوصول"
+    }
+  },
+  
+  "login": "تسجيل الدخول",
+  "signup": "إنشاء حساب",
+  "pleaseFill": "يرجى ملء المعلومات أدناه:",
+  "enterEmailPassword": "أدخل بريدك الإلكتروني وكلمة المرور لتسجيل الدخول:",
+  "firstName": "الاسم الأول",
+  "lastName": "اسم العائلة",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "createAccount": "إنشاء حساب",
+  "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+  "loginBtn": "تسجيل الدخول",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "signUpBtn": "إنشاء حساب",
+  "invalidEmailOrPassword": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+  "registrationSuccess": "تم التسجيل بنجاح! يرجى تسجيل الدخول.",
+
+
+  "carts": {
+    "yourCart": "سلتك",
+    "empty": "سلتك فارغة.",
+    "product": "المنتج",
+    "quantity": "الكمية",
+    "total": "المجموع",
+    "decreaseQuantity": "تقليل كمية {{title}}",
+    "increaseQuantity": "زيادة كمية {{title}}",
+    "removeItem": "إزالة {{title}} من السلة",
+    "totalItems": "إجمالي العناصر",
+    "totalPrice": "السعر الإجمالي",
+    "taxesShipping": "يتم حساب الضرائب والشحن عند الدفع",
+    "checkout": "الدفع"
+  },
+  "error": {
+    "fetchCartFailed": "فشل في جلب عناصر السلة:",
+    "removeFailed": "فشل في إزالة العنصر:",
+    "updateQuantityFailed": "فشل في تحديث الكمية:"
+  }
+
+,
+
+  "checkout": {
+    "title": "إتمام الطلب",
+    "contact": "معلومات الاتصال",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "delivery": "التوصيل",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "address": "العنوان",
+    "apt": "الشقة، الوحدة، إلخ (اختياري)",
+    "city": "المدينة",
+    "state": "الولاية/المحافظة",
+    "postal": "الرمز البريدي",
+    "country": "البلد",
+    "cartEmpty": "سلتك فارغة.",
+    "totalLabel": "المجموع",
+    "completeOrder": "إتمام الطلب"
+  },
+  "errors": {
+    "fetchCartFailed": "فشل في جلب عناصر السلة:"
+  }
+,
+
+  "contacts": {
+    "title": "اتصل بنا",
+    "orderStatus": "تبحث عن تحديث حالة الطلب؟",
+    "spamNotice": "تحقق من مجلد الرسائل غير المرغوب فيها أو الترويجية! قد يصل البريد هناك عن طريق الخطأ.",
+    "emailPrompt": "للتواصل معنا، يرجى إرسال بريد إلكتروني إلى أحد العناوين التالية، أو ملء النموذج أدناه.",
+    "responseTime": "يرجى الانتظار ٥‑٧ أيام عمل (من الإثنين إلى الجمعة). نرد حسب الترتيب الذي وصِل به البريد. شكرًا لك!",
+    "generalLabel": "أسئلة أو تعليقات عامة",
+    "generalEmail": "info@herbivorebotanicals.com",
+    "pressLabel": "استفسارات إعلامية / علاقات عامة",
+    "pressEmail": "pr@herbivorebotanicals.com",
+    "wholesaleLabel": "الجملة",
+    "wholesaleEmail": "wholesale@herbivorebotanicals.com",
+    "namePlaceholder": "الاسم",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "messagePlaceholder": "الرسالة",
+    "sending": "جارٍ الإرسال…",
+    "sendMessage": "إرسال الرسالة",
+    "validationError": "يرجى ملء جميع الحقول.",
+    "success": "تم إرسال رسالتك! سنعاود الاتصال بك قريبًا.",
+    "error": "فشل في إرسال الرسالة. يرجى المحاولة لاحقًا."
+  }
+,
+
+  "about.title": "معلومات عنا",
+  "about.intro": "مرحبًا بكم في Herbivore Botanicals، حيث تدفع القوة النباتية الفعالة تركيباتنا المثبتة سريريًا للعناية بالبشرة للشفاء والحماية والتغذية — بشكل طبيعي.",
+  "about.description": "نحن نجمع بعناية بين المكونات النباتية القوية والعطور النباتية والزبدة والزيوت الطبيعية الفاخرة لإنشاء قوام وعطور فاخرة. هدفنا هو أن تستمتع حقًا بروتين العناية بالبشرة والاستحمام الخاص بك — دون المساومة على الفعالية.",
+  "about.button": "اشعر بالفرق"
+
+
+
+}

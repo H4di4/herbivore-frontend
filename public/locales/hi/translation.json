@@ -1,0 +1,262 @@
+{
+  "welcome": "स्वागत है",
+  "language": "भाषा",
+  "currency": "मुद्रा",
+  "price": "कीमत",
+  "product_name": "उत्पाद का नाम",
+  "add_to_cart": "कार्ट में डालें",
+
+  "shop": "खरीदारी",
+  "bestsellers": "सर्वाधिक बिकने वाले",
+  "contact": "संपर्क करें",
+  "about_us": "हमारे बारे में",
+
+  "skincare": "त्वचा की देखभाल",
+  "bath_and_body": "स्नान और शरीर",
+  "by_concern": "समस्याओं के अनुसार",
+
+  "serums": "सीरम्स",
+  "oils": "तेल",
+  "cleansers": "क्लेंज़र",
+  "eye_creams": "आई क्रीम्स",
+  "moisturizers": "मॉइस्चराइज़र",
+  "lip_care": "होंठों की देखभाल",
+
+  "bath_body": "स्नान + शरीर",
+  "scrubs": "स्क्रब्स",
+  "body_moisturizers": "बॉडी मॉइस्चराइज़र",
+  "soaps": "साबुन",
+  "all": "सभी",
+  "new": "नया",
+  "sets": "सेट्स",
+
+  "fine_lines": "झुर्रियाँ",
+  "dullness": "धुंधलापन और काले धब्बे",
+  "dryness": "रूखापन",
+  "acne": "मुँहासे",
+  "redness": "लाली",
+
+  "shop_all": "सभी खरीदें",
+  "new_arrivals": "नवीनतम उत्पाद",
+  "sets_bundles": "सेट्स + बंडल्स",
+
+  "shop_bestsellers": "सर्वाधिक बिकने वाले उत्पाद खरीदें",
+  "new_tremella": "नया! ट्रेमेला जेल क्रीम",
+
+  "lightweight_hydration": "हल्का हाइड्रेशन",
+  "brightening_collection": "ब्राइटनिंग कलेक्शन",
+ 
+  "nav": {
+    "home": "होम",
+    "about": "हमारे बारे में",
+    "blog": "ब्लॉग",
+    "contact": "संपर्क करें",
+    "admin": "प्रशासन"
+  },
+
+
+  "cart": {
+    "yourCart": "आपकी कार्ट",
+    "empty": "आपकी कार्ट खाली है।",
+    "continueShopping": "खरीदारी जारी रखें",
+    "promo": "किसी भी सीरम ऑर्डर पर मुफ़्त आई क्रीम प्राप्त करें। बस दोनों को कार्ट में डालें और कोड EYECREAM का उपयोग करें।",
+    "decreaseQuantity": "{{title}} की मात्रा कम करें",
+    "increaseQuantity": "{{title}} की मात्रा बढ़ाएं",
+    "removeItem": "{{title}} को कार्ट से निकालें",
+    "subtotal": "उप-योग",
+    "item": "आइटम",
+    "items": "आइटम",
+    "checkout": "चेकआउट",
+    "viewCart": "कार्ट देखें"
+  },
+
+  "scroll": {
+    "cLeanBeauty": "साफ-सुथरी सुंदरता",
+    "hydration": "हाइड्रेशन",
+    "glowingSkin": "दमकती त्वचा",
+    "plantBased": "पौधों पर आधारित",
+    "ninetyNinePercentNatural": "99% प्राकृतिक",
+    "naturalIngredients": "प्राकृतिक सामग्री",
+    "sustainable": "टिकाऊ",
+    "vegan": "विगन",
+    "ecoConscious": "पर्यावरण जागरूक",
+    "organicFormulas": "जैविक सूत्र",
+    "awardWinning": "पुरस्कार विजेता",
+    "parabenFree": "पैराबेन मुक्त"
+  },
+  
+  "feature": {
+    "alt": "हाइड्रेशन एसेंशियल्स सेट",
+    "limitedEdition": "सीमित संस्करण",
+    "titleLine1": "हाइड्रेशन एसेंशियल्स",
+    "titleLine2": "सेट",
+    "savePercent": "20% बचाएं",
+    "description": "इस हाइड्रेटिंग ट्रायो पर दमकती, ताज़ा त्वचा के लिए—प्लस एक मुफ्त सीमित संस्करण गुलाबी ट्यूल बैले बैग।",
+    "shopNow": "अभी खरीदें"
+  },
+  
+  "bestseller": {
+    "loading": "बेस्टसेलर्स लोड हो रहे हैं...",
+    "title": "बेस्टसेलर्स",
+    "currentCurrency": "वर्तमान मुद्रा: {{currency}}",
+    "priceSymbol": "₹",
+    "addToCart": "कार्ट में डालें"
+  }
+,
+
+  "about": {
+    "alt": "हमारे बारे में",
+    "title": "हमारे बारे में",
+    "headingLine1": "पौधे हैं हमारी",
+    "headingLine2": "चीज़",
+    "description": "हम अपने फॉर्मूले में 99% प्राकृतिक सामग्री का उपयोग करते हैं, पौधों के पोषक तत्वों से भरपूर सक्रिय तत्वों को स्रोत बनाते हैं।",
+    "button": "हमारा दर्शन"
+  }
+ ,
+  "heading" : "संपादक द्वारा अनुमोदित त्वचा और शरीर की देखभाल",
+  
+  "newsletter": {
+    "heading": "15% की छूट के लिए साइन अप करें",
+    "description": "अपने पहले ऑर्डर पर 15% की छूट पाएं साथ ही नए प्रोडक्ट्स, टिप्स और एक्सक्लूसिव ऑफ़र्स तक पहुंच प्राप्त करें।",
+    "emailPlaceholder": "ई-मेल",
+    "button": "साइन अप करें"
+  },
+  
+  "footer": {
+    "tagline": "प्लांट पावर्ड, क्लिनिकली इफेक्टिव",
+    "sections": {
+      "shop": "शॉप",
+      "shopLinks": {
+        "shopAll": "सभी देखें",
+        "bestsellers": "सबसे लोकप्रिय",
+        "skincare": "स्किनकेयर",
+        "bathBody": "बाथ + बॉडी",
+        "setsBundles": "सेट्स + बंडल्स"
+      },
+      "about": "हमारे बारे में",
+      "aboutLinks": {
+        "aboutUs": "हमारे बारे में",
+        "blog": "ब्लॉग: नैचुरली स्पीकिंग"
+      },
+      "customerService": "ग्राहक सेवा",
+      "customerLinks": {
+        "faqs": "अक्सर पूछे जाने वाले प्रश्न",
+        "returns": "रिटर्न",
+        "contact": "संपर्क करें"
+      },
+      "account": "खाता",
+      "accountLinks": {
+        "myAccount": "मेरा खाता"
+      }
+    },
+    "legal": {
+      "copyright": "© 2025 हरबिवोर बोटैनिकल्स, LLC। सर्वाधिकार सुरक्षित।",
+      "privacyPolicy": "गोपनीयता नीति",
+      "termsOfService": "सेवा की शर्तें",
+      "accessibility": "पहुँच"
+    }
+  }
+,
+
+  "login": "लॉगिन",
+  "signup": "साइन अप करें",
+  "pleaseFill": "कृपया नीचे दी गई जानकारी भरें:",
+  "enterEmailPassword": "लॉगिन करने के लिए अपना ईमेल और पासवर्ड दर्ज करें:",
+  "firstName": "पहला नाम",
+  "lastName": "अंतिम नाम",
+  "email": "ई-मेल",
+  "password": "पासवर्ड",
+  "createAccount": "खाता बनाएँ",
+  "alreadyHaveAccount": "क्या आपके पास पहले से खाता है?",
+  "loginBtn": "लॉगिन करें",
+  "dontHaveAccount": "क्या आपके पास खाता नहीं है?",
+  "signUpBtn": "साइन अप करें",
+  "invalidEmailOrPassword": "अमान्य ईमेल या पासवर्ड",
+  "registrationSuccess": "पंजीकरण सफल! कृपया लॉगिन करें।"
+,
+
+  "carts": {
+    "yourCart": "आपकी कार्ट",
+    "empty": "आपकी कार्ट खाली है।",
+    "product": "उत्पाद",
+    "quantity": "मात्रा",
+    "total": "कुल",
+    "decreaseQuantity": "{{title}} की मात्रा कम करें",
+    "increaseQuantity": "{{title}} की मात्रा बढ़ाएं",
+    "removeItem": "{{title}} को कार्ट से निकालें",
+    "totalItems": "कुल आइटम",
+    "totalPrice": "कुल कीमत",
+    "taxesShipping": "टैक्स और शिपिंग चेकआउट पर गणना की जाती है",
+    "checkout": "चेकआउट"
+  },
+  "error": {
+    "fetchCartFailed": "कार्ट आइटम लाने में विफल:",
+    "removeFailed": "आइटम हटाने में विफल:",
+    "updateQuantityFailed": "मात्रा अपडेट करने में विफल:"
+  }
+,
+
+  "checkout": {
+    "title": "चेकआउट",
+    "contact": "संपर्क जानकारी",
+    "emailPlaceholder": "ईमेल पता",
+    "delivery": "डिलीवरी",
+    "firstName": "पहला नाम",
+    "lastName": "अंतिम नाम",
+    "address": "पता",
+    "apt": "अपार्टमेंट, सूट आदि (वैकल्पिक)",
+    "city": "शहर",
+    "state": "राज्य/प्रदेश",
+    "postal": "पिन कोड",
+    "country": "देश",
+    "cartEmpty": "आपकी गाड़ी खाली है।",
+    "totalLabel": "कुल",
+    "completeOrder": "ऑर्डर पूरा करें"
+  },
+  "errors": {
+    "fetchCartFailed": "कार्ट आइटम लाने में विफल:"
+  }
+,
+
+  "contacts": {
+    "title": "हमसे संपर्क करें",
+    "orderStatus": "क्या आप ऑर्डर स्थिति अपडेट देखना चाहते हैं?",
+    "spamNotice": "कृपया अपना स्पैम/जंक या प्रमोशन फ़ोल्डर चेक करें! कभी-कभी हमारी ईमेल गलत फ़ोल्डर में जाती हैं।",
+    "emailPrompt": "संपर्क करने के लिए, कृपया निम्न पता पर ईमेल भेजें या नीचे फॉर्म भरें।",
+    "responseTime": "कृपया 5‑7 कार्यदिवस (सोम‑शुक्र) का समय दें। हम संदेशों को प्राप्त क्रम में जवाब देते हैं। धन्यवाद!",
+    "generalLabel": "सामान्य प्रश्न या टिप्पणी",
+    "generalEmail": "info@herbivorebotanicals.com",
+    "pressLabel": "प्रेस / पीआर पूछताछ",
+    "pressEmail": "pr@herbivorebotanicals.com",
+    "wholesaleLabel": "थोक बिक्री",
+    "wholesaleEmail": "wholesale@herbivorebotanicals.com",
+    "namePlaceholder": "नाम",
+    "emailPlaceholder": "ई‑मेल",
+    "messagePlaceholder": "संदेश",
+    "sending": "भेजा जा रहा है…",
+    "sendMessage": "संदेश भेजें",
+    "validationError": "कृपया सभी फ़ील्ड भरें।",
+    "success": "आपका संदेश भेज दिया गया है! हम जल्द ही उत्तर देंगे।",
+    "error": "संदेश भेजने में विफल। कृपया बाद में फिर से प्रयास करें।"
+  },
+  "about.title": "हमारे बारे में",
+  "about.intro": "Herbivore Botanicals में आपका स्वागत है, जहां वनस्पति सक्रिय तत्वों की शक्ति हमारे नैदानिक रूप से सिद्ध स्किनकेयर फ़ॉर्मूलों को प्राकृतिक रूप से ठीक करने, सुरक्षा प्रदान करने और पोषण देने का काम करती है।",
+  "about.description": "हम शक्तिशाली वनस्पति तत्वों को प्राकृतिक खुशबुओं और समृद्ध बटर व तेलों के साथ मिलाते हैं, जिससे शानदार बनावट और सुगंध मिलती है। हमारा लक्ष्य है कि आप अपने स्किनकेयर और स्नान के अनुभव का आनंद लें, बिना प्रभावशीलता के समझौता किए।",
+  "about.button": "अंतर महसूस करें"
+
+,
+
+
+  "all_bestsellers": "TODOS LOS MÁS VENDIDOS",
+  "phoenix_oil": "PHOENIX Aceite Facial de Renovación Profunda",
+  "nova_serum": "NOVA Sérum Iluminador con 15% Vitamina C + Cúrcuma",
+  "lapis_oil": "LAPIS Aceite Facial Equilibrante",
+  "moon_fruit_serum": "MOON FRUIT Sérum Alternativo con 1% Bakuchiol + Péptidos Retinol"
+
+
+
+
+
+
+
+}

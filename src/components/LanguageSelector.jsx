@@ -34,9 +34,8 @@ export default function LanguageSelector() {
       >
         <span>{selectedLang ? selectedLang.label : 'Select Language'}</span>
         <svg
-          className={`h-4 w-4 transform transition-transform duration-200 ${
-            dropdownOpen ? 'rotate-180' : 'rotate-0'
-          }`}
+          className={`h-4 w-4 transform transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : 'rotate-0'
+            }`}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -47,13 +46,12 @@ export default function LanguageSelector() {
       </button>
 
       {dropdownOpen && (
-        <ul className="absolute mt-1 py-2 border bg-white w-full max-h-60 overflow-auto z-10 shadow-lg text-[13px] rounded">
+        <ul className="absolute mt-1 right-0.5 py-2 border bg-white w-64 max-h-60 overflow-auto z-10 shadow-lg text-[13px]">
           {languages.map(({ code, label }) => (
             <li
               key={code}
-              className={`px-4 py-2 cursor-pointer hover:text-black ${
-                code === language ? 'text-black font-semibold' : 'text-gray-600'
-              }`}
+              className={`px-4 py-2 cursor-pointer hover:text-black ${code === language ? 'text-black font-semibold' : 'text-gray-600'
+                }`}
               onClick={() => handleSelect(code)}
             >
               {label}

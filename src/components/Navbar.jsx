@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import headerImg from '../assets/header.jpg';
 import dpImg1 from '../assets/dropdownimg1.avif';
@@ -13,6 +13,7 @@ import axios from 'axios'
 import { categoryToSlug } from '../utils/categorySlug';
 import LanguageSelector from './LanguageSelector';
 import CurrencySelector from './CurrencySelector';
+import { AuthContext } from '../context/AuthContext';
 
 const Navbar = () => {
   const { cartItems, removeFromCart, updateQuantity, totalQuantity, totalPrice, cartOpen, setCartOpen } = useCart();
@@ -21,13 +22,27 @@ const Navbar = () => {
   const [shopDropdownOpen, setShopDropdownOpen] = useState(false);
   const [bestsellersDropdownOpen, setBestsellersDropdownOpen] = useState(false);
   const bestsellersDropdownRef = useRef(null);
-
+  const { user, login, logout } = useContext(AuthContext);
   const dropdownRef = useRef(null);
   const { setFilters, performSearch } = useSearch();
   const [searchOpen, setSearchOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+
+  // Optional: close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const closeTimeout = useRef(null);
+
 
 
   const defaultBestsellers = [
@@ -38,7 +53,11 @@ const Navbar = () => {
   ]
   const [bestsellers, setBestsellers] = useState(defaultBestsellers);
 
-
+  const handleLogout = () => {
+    console.log('Logging out...');
+    logout();
+    navigate('/login');
+  };
 
 
   useEffect(() => {
@@ -192,7 +211,7 @@ const Navbar = () => {
                     <div className="flex gap-12">
                       {/* Column 1: Skincare */}
                       <div className="min-w-[180px] pl-8">
-                        <div  className="text-black font-bold tracking-tighter text-sm mb-4">
+                        <div className="text-black font-bold tracking-tighter text-sm mb-4">
                           {t('skincare').toUpperCase()}
                         </div>
                         <ul className="space-y-2 text-sm font-normal" onClick={() => setShopDropdownOpen(false)}>
@@ -360,14 +379,48 @@ const Navbar = () => {
             <LanguageSelector />
             <CurrencySelector />
             {/* Admin login icon */}
-            <Link to="/login" className="hidden md:inline-block text-black" aria-label="Admin Login">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M4 21v-2a4 4 0 0 1 3-3.87" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-            </Link>
+            <div className="relative inline-block text-left " ref={dropdownRef}>
+              <button
+                onClick={() => setOpen(!open)}
+                className="hidden md:inline-block text-black "
+                aria-label="User Menu"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M4 21v-2a4 4 0 0 1 3-3.87" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </button>
+
+              {open && (
+                <div className="absolute right-0 mt-2 w-48 uppercase bg-white border border-gray-200 z-50">
+
+
+                  <a
+                    href="http://localhost:5173/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-[12px] text-gray-600  hover:text-black"
+                  >
+                    Admin Panel
+                  </a>
+
+                  <button
+                    onClick={() => navigate(user ? '/profile' : '/login')}
+                    className="block w-full text-left px-4 py-2 text-sm hover:text-black "
+                  >
+                    My Orders
+                  </button>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full text-left px-4 py-2 text-[12px] text-gray-600 uppercase hover:text-black"
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
 
             {/* Search icon */}
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" fill="none" stroke="currentColor " className='hover:cursor-pointer'
@@ -451,139 +504,139 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-  {menuOpen && (
-  <div className="md:hidden bg-white shadow-inner px-6 py-4 space-y-4 font-medium text-black">
-    <Link to="/" onClick={() => setMenuOpen(false)} className="block">{t("nav.home")}</Link>
-    <Link to="/about" onClick={() => setMenuOpen(false)} className="block">{t("nav.about")}</Link>
-    <Link to="/blog" onClick={() => setMenuOpen(false)} className="block">{t("nav.blog")}</Link>
-    <Link to="/contact" onClick={() => setMenuOpen(false)} className="block">{t("nav.contact")}</Link>
-    <Link to="/admin" onClick={() => setMenuOpen(false)} className="block font-semibold">{t("nav.admin")}</Link>
-    <Link to="/cart" onClick={() => setMenuOpen(false)} className="block text-2xl">🛒</Link>
-  </div>
-)}
-</nav>
+        {menuOpen && (
+          <div className="md:hidden bg-white shadow-inner px-6 py-4 space-y-4 font-medium text-black">
+            <Link to="/" onClick={() => setMenuOpen(false)} className="block">{t("nav.home")}</Link>
+            <Link to="/about" onClick={() => setMenuOpen(false)} className="block">{t("nav.about")}</Link>
+            <Link to="/blog" onClick={() => setMenuOpen(false)} className="block">{t("nav.blog")}</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)} className="block">{t("nav.contact")}</Link>
+            <Link to="/admin" onClick={() => setMenuOpen(false)} className="block font-semibold">{t("nav.admin")}</Link>
+            <Link to="/cart" onClick={() => setMenuOpen(false)} className="block text-2xl">🛒</Link>
+          </div>
+        )}
+      </nav>
 
-{/* Cart Drawer */}
-<CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)}>
-  <div className="flex flex-col h-full overflow-hidden">
-    <h2 className="flex items-center justify-center text-sm font-bold mb-2">{t("cart.yourCart")}</h2>
+      {/* Cart Drawer */}
+      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)}>
+        <div className="flex flex-col h-full overflow-hidden">
+          <h2 className="flex items-center justify-center text-sm font-bold mb-2">{t("cart.yourCart")}</h2>
 
-    {cartItems.length === 0 ? (
-      <>
-        <p className="flex items-center justify-center flex-grow">{t("cart.empty")}</p>
-        <Link
-          to="/skincare"
-          onClick={() => setCartOpen(false)}
-          className="flex flex-col flex-1 items-center justify-center mt-4 px-4 py-4 bg-[rgb(59,59,59)] text-white text-center"
-        >
-          {t("cart.continueShopping")}
-        </Link>
-      </>
-    ) : (
-      <>
-        {/* Scrollable Cart Items List */}
-        <div className="flex-grow overflow-y-auto px-4">
-          <p className="text-center text-xs">{t("cart.promo")}</p>
-          {cartItems.map((item) => (
-            <div
-              key={item._id}
-              className="flex items-center justify-around gap-1 bg-white rounded-md mb-4 p-4 relative"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-20 h-20 object-cover"
-              />
-              <div className="flex flex-col flex-1 ml-4">
-                <h3 className="text-xs font-semibold text-gray-900">{item.title}</h3>
-
-                <div className="flex items-center gap-2 mt-2">
-                  <button
-                    onClick={() => updateQuantity(item._id, item.quantity - 1)}
-                    disabled={item.quantity <= 1}
-                    className="px-1 py-1"
-                    aria-label={t("cart.decreaseQuantity", { title: item.title })}
+          {cartItems.length === 0 ? (
+            <>
+              <p className="flex items-center justify-center flex-grow">{t("cart.empty")}</p>
+              <Link
+                to="/skincare"
+                onClick={() => setCartOpen(false)}
+                className="flex flex-col flex-1 items-center justify-center mt-4 px-4 py-4 bg-[rgb(59,59,59)] text-white text-center"
+              >
+                {t("cart.continueShopping")}
+              </Link>
+            </>
+          ) : (
+            <>
+              {/* Scrollable Cart Items List */}
+              <div className="flex-grow overflow-y-auto px-4">
+                <p className="text-center text-xs">{t("cart.promo")}</p>
+                {cartItems.map((item) => (
+                  <div
+                    key={item._id}
+                    className="flex items-center justify-around gap-1 bg-white rounded-md mb-4 p-4 relative"
                   >
-                    -
-                  </button>
-                  <span className="text-lg text-black">{item.quantity}</span>
-                  <button
-                    onClick={() => updateQuantity(item._id, item.quantity + 1)}
-                    className="px-1 py-1"
-                    aria-label={t("cart.increaseQuantity", { title: item.title })}
-                  >
-                    +
-                  </button>
-                </div>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-20 h-20 object-cover"
+                    />
+                    <div className="flex flex-col flex-1 ml-4">
+                      <h3 className="text-xs font-semibold text-gray-900">{item.title}</h3>
+
+                      <div className="flex items-center gap-2 mt-2">
+                        <button
+                          onClick={() => updateQuantity(item._id, item.quantity - 1)}
+                          disabled={item.quantity <= 1}
+                          className="px-1 py-1"
+                          aria-label={t("cart.decreaseQuantity", { title: item.title })}
+                        >
+                          -
+                        </button>
+                        <span className="text-lg text-black">{item.quantity}</span>
+                        <button
+                          onClick={() => updateQuantity(item._id, item.quantity + 1)}
+                          className="px-1 py-1"
+                          aria-label={t("cart.increaseQuantity", { title: item.title })}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <p className="text-xs font-normal text-black ml-4">
+                      ${item.price}
+                    </p>
+
+                    <button
+                      onClick={() => removeFromCart(item._id)}
+                      className="absolute top-3 right-4"
+                      aria-label={t("cart.removeItem", { title: item.title })}
+                    >
+                      {/* SVG icon unchanged */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                        <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+                      </svg>
+                    </button>
+                  </div>
+                ))}
               </div>
 
-              <p className="text-xs font-normal text-black ml-4">
-                ${item.price }
-              </p>
-
-              <button
-                onClick={() => removeFromCart(item._id)}
-                className="absolute top-3 right-4"
-                aria-label={t("cart.removeItem", { title: item.title })}
-              >
-                {/* SVG icon unchanged */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="20"
-                  height="20"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+              {/* Subtotal Section fixed at bottom */}
+              <div className="shrink-0 px-4 py-6 border-t border-gray-300 bg-white">
+                <div className="flex justify-between text-sm font-semibold text-black mb-2">
+                  <span>
+                    {t("cart.subtotal")} ({totalQuantity} {totalQuantity === 1 ? t("cart.item") : t("cart.items")})
+                  </span>
+                  <span>${totalPrice.toFixed(2)}</span>
+                </div>
+                <Link
+                  to="/checkout"
+                  onClick={() => setCartOpen(false)}
+                  className="inline-block w-full bg-[rgb(59,59,59)] text-white py-3 px-4 text-center transition"
                 >
-                  <polyline points="3 6 5 6 21 6" />
-                  <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-                  <path d="M10 11v6" />
-                  <path d="M14 11v6" />
-                  <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
-                </svg>
-              </button>
-            </div>
-          ))}
+                  {t("cart.checkout")}
+                </Link>
+                <Link
+                  to="/cart"
+                  onClick={() => setCartOpen(false)}
+                  className="mt-2 inline-block w-full border-2 border-[rgb(59,59,59)] text-black py-3 px-4 text-center transition"
+                >
+                  {t("cart.viewCart")}
+                </Link>
+                <Link
+                  to="/skincare"
+                  onClick={() => setCartOpen(false)}
+                  className="mt-2 text-sm inline-block w-full text-black py-3 px-4 text-center transition"
+                >
+                  {t("cart.continueShopping")}
+                </Link>
+                <hr className="w-3 h-2 b" />
+              </div>
+            </>
+          )}
         </div>
-
-        {/* Subtotal Section fixed at bottom */}
-        <div className="shrink-0 px-4 py-6 border-t border-gray-300 bg-white">
-          <div className="flex justify-between text-sm font-semibold text-black mb-2">
-            <span>
-              {t("cart.subtotal")} ({totalQuantity} {totalQuantity === 1 ? t("cart.item") : t("cart.items")})
-            </span>
-            <span>${totalPrice.toFixed(2)}</span>
-          </div>
-          <Link
-            to="/checkout"
-            onClick={() => setCartOpen(false)}
-            className="inline-block w-full bg-[rgb(59,59,59)] text-white py-3 px-4 text-center transition"
-          >
-            {t("cart.checkout")}
-          </Link>
-          <Link
-            to="/cart"
-            onClick={() => setCartOpen(false)}
-            className="mt-2 inline-block w-full border-2 border-[rgb(59,59,59)] text-black py-3 px-4 text-center transition"
-          >
-            {t("cart.viewCart")}
-          </Link>
-          <Link
-            to="/skincare"
-            onClick={() => setCartOpen(false)}
-            className="mt-2 text-sm inline-block w-full text-black py-3 px-4 text-center transition"
-          >
-            {t("cart.continueShopping")}
-          </Link>
-          <hr className="w-3 h-2 b" />
-        </div>
-      </>
-    )}
-  </div>
-</CartDrawer>
+      </CartDrawer>
 
 
     </>

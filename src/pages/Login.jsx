@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
+import { AuthContext } from '../context/AuthContext';
+
+
 
 const Login = () => {
   const { t } = useTranslation();
-
+  const { login } = useContext(AuthContext);
   const [isRegister, setIsRegister] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -30,14 +33,12 @@ const Login = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
       const { token } = res.data;
-      localStorage.setItem('token', token);
-      console.log('token set:', localStorage.getItem('token'));
-      localStorage.removeItem('jwtToken');
-      console.log('jwtToken after removal:', localStorage.getItem('jwtToken'));
 
+      login(token); 
+      navigate('/profile'); 
 
-      navigate('/profile');  // Navigate to homepage or dashboard on success
     } catch (err) {
+      console.error(err.response?.data);
       setError(t('invalidEmailOrPassword'));
     }
   };

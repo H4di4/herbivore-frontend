@@ -63,7 +63,7 @@ function CurrencySelector() {
       </button>
 
       {dropdownOpen && (
-        <ul className="absolute mt-1 py-2 border bg-white w-64 max-h-60 overflow-auto z-10 shadow-lg text-[13px]">
+        <ul className="absolute mt-1 right-0.5 py-2 border bg-white w-64 max-h-60 overflow-auto z-10 shadow-lg text-[13px]">
           {currencies.map(({ country, code, symbol }) => (
             <li
               key={code}

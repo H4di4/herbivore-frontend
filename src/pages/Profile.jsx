@@ -4,102 +4,102 @@ import { Link } from 'react-router-dom';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
+  const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const token = localStorage.getItem('token');
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const token = localStorage.getItem('token');
-      if (!token) {
-        setLoading(false);
-        return;
-      }
-
       try {
         const res = await axios.get('http://localhost:5000/api/user/profile', {
-          headers: {
-             Authorization: `Bearer ${localStorage.getItem('token')}`
-          },
+          headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data);
       } catch (err) {
-        console.error('Error fetching profile:', err);
+        console.error('Profile error:', err);
         setUser(null);
+      }
+    };
+
+    const fetchOrders = async () => {
+      try {
+        const res = await axios.get('http://localhost:5000/api/orders/my', {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setOrders(res.data);
+      } catch (err) {
+        console.error('Orders error:', err);
+        setOrders([]);
       } finally {
         setLoading(false);
       }
     };
 
     fetchProfile();
-  }, []);
+    fetchOrders();
+  }, [token]);
 
   if (loading) return <div className="text-center mt-8">Loading...</div>;
   if (!user) return <div className="text-center text-red-500 mt-8">Unable to load profile</div>;
 
   return (
     <div className="max-w-4xl mx-auto px-6 mt-12">
-      {/* Top Section */}
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-        {/* Profile Picture */}
-        <div className="flex-shrink-0">
-          {user.profilePicture ? (
-            <img
-              src={`http://localhost:5000${user.profilePicture}`}
-              alt="Profile"
-              className="w-32 h-32 rounded-full object-cover"
-            />
-          ) : (
-            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center text-white">
-              No Image
-            </div>
-          )}
-        </div>
-
-        {/* User Info */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-2xl font-semibold mb-1">
-            {user.firstName ?? 'User'} {user.lastName ?? ''}
-          </h1>
-
-          <div className="flex justify-center md:justify-start gap-6 text-sm text-gray-700 mb-3">
-            <span><strong>{user.savedPosts?.length || 0}</strong> posts</span>
-            <span><strong>0</strong> followers</span>
-            <span><strong>0</strong> following</span>
-          </div>
-
-          <p className="text-sm mb-1">{user.bio || 'No bio yet'}</p>
-        
-
-          {/* Full-width Edit Button */}
-          <div className="mt-4">
-            <Link
-              to="/edit-profile"
-              className="block w-full md:w-auto text-center px-4 py-2 border border-gray-400 text-sm  hover:bg-[rgb(56,56,56)] hover:text-white"
-            >
-              Edit Profile
-            </Link>
-          </div>
-        </div>
+      <div className="mb-6 text-center md:text-left">
+        <h1 className="text-3xl font-semibold">
+          {user.firstName} {user.lastName}
+        </h1>
+        <p className="text-gray-700">{user.email}</p>
+        <Link
+          to="/edit-profile"
+          className="inline-block mt-3 px-4 py-2 border border-gray-400 text-sm hover:bg-[rgb(56,56,56)] hover:text-white "
+        >
+         EDIT PROFILE
+        </Link>
       </div>
 
-      {/* Divider */}
       <hr className="my-8 border-gray-300" />
 
-      {/* Saved Posts Grid */}
-      <div>
-        <h3 className="text-lg font-semibold mb-4 text-center md:text-left">Saved Posts</h3>
-        {user.savedPosts?.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {user.savedPosts.map(post => (
-              <div
-                key={post._id}
-                className="bg-gray-100 h-40 flex items-center justify-center text-sm text-gray-700"
-              >
-                {post.title}
-              </div>
-            ))}
+      {/* Orders Section */}
+      <div className="mt-8">
+        <h3 className="text-lg font-semibold mb-4 text-center md:text-left">My Orders</h3>
+
+        {orders.length > 0 ? (
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white text-sm text-left border">
+              <thead className="bg-gray-100 text-xs uppercase">
+                <tr>
+                  <th className="px-4 py-3 border">Order ID</th>
+                  <th className="px-4 py-3 border">Status</th>
+                  <th className="px-4 py-3 border">Total</th>
+                  <th className="px-4 py-3 border">Date</th>
+                  <th className="px-4 py-3 border">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.map(order => (
+                  <tr key={order._id}>
+                    <td className="px-4 py-3 border">{order._id}</td>
+                    <td className="px-4 py-3 border capitalize">{order.status}</td>
+                    <td className="px-4 py-3 border">${order.totalAmount?.toFixed(2)}</td>
+                    <td className="px-4 py-3 border">
+                      {new Date(order.createdAt).toLocaleDateString()}
+                    </td>
+                    <td className="px-4 py-3 border">
+                      <Link
+                        to={`/orders/${order._id}`}
+                        className="text-blue-600 hover:underline text-sm"
+                      >
+                        View Details
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         ) : (
-          <p className="text-center text-gray-600">No saved posts yet.</p>
+          <p className="text-center text-gray-600">You have no orders yet.</p>
         )}
       </div>
     </div>

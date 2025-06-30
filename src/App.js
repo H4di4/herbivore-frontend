@@ -23,13 +23,20 @@ import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import Breadcrumbs from './components/Breadcrums';
 import { TranslateProvider } from './context/TranslateProvider';
+import { AuthContext, AuthProvider } from './context/AuthContext';
+
 import "./i18n";
 import FAQSection from './components/FAQSection';
+import AdminLogin from './pages/AdminLogin';
+import OrderDetails from './components/OrderDetails';
 
 const App = () => {
   usePageTitle();
 
   return (
+    <AuthProvider>
+     
+  
     <TranslateProvider>
       <SearchProvider>
         <CartProvider>
@@ -57,12 +64,19 @@ const App = () => {
               <Route path="/product/:slug" element={<ProductDetail />} />
               <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
               <Route path="/faq" element={<FAQSection/>} />
+              <Route path="/admin/login" element={<AdminLogin/>} />
+              <Route path="/orders/:id" element={<OrderDetails />} />
+
+
+              
+              
 
             </Routes>
        
         </CartProvider>
       </SearchProvider>
     </TranslateProvider>
+      </AuthProvider>
   );
 };
 

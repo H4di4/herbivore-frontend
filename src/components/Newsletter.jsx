@@ -10,19 +10,22 @@ const Newsletter = () => {
       className="relative bg-cover bg-center text-white"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      {/* Overlay to make text readable */}
+      {/* Semi-transparent overlay for better text visibility */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Content */}
+      {/* Main content container */}
       <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 text-center">
+        {/* Heading */}
         <h2 className="text-4xl md:text-3xl font-normal mb-6">
           {t('newsletter.heading')}
         </h2>
+
+        {/* Description text */}
         <p className="text-sm md:text-base mb-8">
           {t('newsletter.description')}
         </p>
 
-        {/* Email input and button */}
+        {/* Email input form */}
         <form className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
           <input
             type="email"

@@ -1,3 +1,10 @@
+// Navbar component responsible for top navigation including:
+// - Shop and Bestsellers dropdowns
+// - Search bar
+// - User menu
+// - Cart drawer
+// - Responsive mobile nav
+
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import headerImg from '../assets/header.jpg';
@@ -30,7 +37,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
-  // Optional: close dropdown on outside click
+ // Refs to detect outside clicks
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -44,7 +51,7 @@ const Navbar = () => {
   const closeTimeout = useRef(null);
 
 
-
+ // Default bestsellers (fallback before API fetch)
   const defaultBestsellers = [
     { id: '684222c72349fc5b09479235', name: 'NOVA Brightening Serum', slug: 'nova-brightening-serum' },
     { id: '6842237b2349fc5b0947923d', name: 'MOON FRUIT Retinol Alternative', slug: 'moon-fruit-retinol-alternative' },
@@ -382,7 +389,7 @@ const Navbar = () => {
             <div className="relative inline-block text-left " ref={dropdownRef}>
               <button
                 onClick={() => setOpen(!open)}
-                className="hidden md:inline-block text-black "
+                className="px-0 py-1 flex items-center text-black "
                 aria-label="User Menu"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"

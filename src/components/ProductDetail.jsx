@@ -7,7 +7,7 @@ import Newsletter from './Newsletter';
 import Footer from './Footer';
 import FAQSection from './FAQSection';
 
-
+// Image gallery with thumbnails and main image
 function ImageGallery({ images }) {
   const [selectedImage, setSelectedImage] = React.useState(0);
 
@@ -23,8 +23,9 @@ function ImageGallery({ images }) {
             src={img}
             alt={`Thumbnail ${index + 1}`}
             onClick={() => setSelectedImage(index)}
-            className={`w-16 h-16 object-cover  cursor-pointer border ${index === selectedImage ? 'border-black' : ''
-              }`}
+            className={`w-16 h-16 object-cover cursor-pointer border ${
+              index === selectedImage ? 'border-black' : ''
+            }`}
           />
         ))}
       </div>
@@ -34,29 +35,30 @@ function ImageGallery({ images }) {
         <img
           src={images[selectedImage]}
           alt={`Product image ${selectedImage + 1}`}
-          className="object-cover w-full h-[500px] "
+          className="object-cover w-full h-[500px]"
         />
       </div>
     </div>
   );
 }
 
-
-
 export default function ProductDetail() {
   const { slug } = useParams();
   const { addToCart } = useCart();
 
-
+  // State to toggle ingredients and how to use sections
   const [showIngredients, setShowIngredients] = useState(false);
   const [showHowToUse, setShowHowToUse] = useState(false);
 
+  // Product data and loading/error states
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Fetch product by slug when component mounts or slug changes
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/products/slug/${slug}`)
+    axios
+      .get(`http://localhost:5000/api/products/slug/${slug}`)
       .then(res => {
         setProduct(res.data);
         setLoading(false);
@@ -67,24 +69,31 @@ export default function ProductDetail() {
       });
   }, [slug]);
 
-  if (loading) return <p className="text-center mt-10 text-gray-600">Loading product...</p>;
+  // Loading state
+  if (loading)
+    return <p className="text-center mt-10 text-gray-600">Loading product...</p>;
+
+  // Error state
   if (error) return <p className="text-center mt-10 text-black">{error}</p>;
-  if (!product) return <p className="text-center mt-10 text-gray-600">Product not found.</p>;
+
+  // If no product found
+  if (!product)
+    return <p className="text-center mt-10 text-gray-600">Product not found.</p>;
 
   return (
     <>
-
-      <div className="max-w-7xl mx-auto  mt-2 text-gray-900 ">
+      <div className="max-w-7xl mx-auto mt-2 text-gray-900">
         <div className="flex flex-col md:flex-row gap-12">
-          {/* Left: Images */}
+          {/* Left side: Product images */}
           <div className="md:w-1/2">
             <ImageGallery images={product.imageUrl} />
-
           </div>
 
-          {/* Right: Details */}
+          {/* Right side: Product details */}
           <div className="md:w-1/2 flex flex-col">
             <h1 className="text-xl font-normal mb-10">{product.name}</h1>
+
+            {/* Price with sale discount if applicable */}
             {product.onSale && product.discountPrice ? (
               <div>
                 <span className="text-gray-700 text-xl">
@@ -93,15 +102,12 @@ export default function ProductDetail() {
                 <span className="line-through text-black font-normal ml-6 text-sm">
                   ${product.price.toFixed(2)}
                 </span>
-
               </div>
             ) : (
               <p className="text-lg">${product.price.toFixed(2)}</p>
             )}
 
-
-
-            {/* Always show Add to Cart button */}
+            {/* Add to Cart button */}
             <button
               onClick={() => addToCart(product)}
               className="inline-block w-full bg-[rgb(59,59,59)] text-white py-3 px-4 text-center transition mb-4 mt-8"
@@ -109,16 +115,19 @@ export default function ProductDetail() {
               ADD TO CART
             </button>
 
-            <p className="text-[15px]  mt-5">{product.description}</p>
+            {/* Product description */}
+            <p className="text-[15px] mt-5">{product.description}</p>
 
-            {/* INGREDIENTS Section */}
+            {/* Ingredients toggle section */}
             <div className="border-t mt-12 border-gray-300 py-4">
               <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => setShowIngredients(!showIngredients)}
               >
                 <h2 className="text-base font-medium">INGREDIENTS</h2>
-                <span className="text-xl font-light">{showIngredients ? '−' : '+'}</span>
+                <span className="text-xl font-light">
+                  {showIngredients ? '−' : '+'}
+                </span>
               </div>
               {showIngredients && (
                 <p className="mt-3 text-sm text-gray-700 whitespace-pre-wrap leading-relaxed">
@@ -127,14 +136,16 @@ export default function ProductDetail() {
               )}
             </div>
 
-            {/* HOW TO USE Section */}
+            {/* How to Use toggle section */}
             <div className="border-t border-gray-300 py-4">
               <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => setShowHowToUse(!showHowToUse)}
               >
                 <h2 className="text-base font-medium">HOW TO USE</h2>
-                <span className="text-xl font-light">{showHowToUse ? '−' : '+'}</span>
+                <span className="text-xl font-light">
+                  {showHowToUse ? '−' : '+'}
+                </span>
               </div>
               {showHowToUse && (
                 <p className="mt-3 text-sm text-gray-700 whitespace-pre-wrap leading-relaxed">
@@ -142,13 +153,14 @@ export default function ProductDetail() {
                 </p>
               )}
             </div>
-
           </div>
         </div>
 
+        {/* Related products section */}
         <RelatedProducts productId={product._id} />
       </div>
 
+      {/* FAQ, Newsletter, and Footer components */}
       <FAQSection />
       <Newsletter />
       <Footer />

@@ -9,21 +9,23 @@ import { useTranslation } from 'react-i18next';
 
 const Press = () => {
   const { t } = useTranslation();
+
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 text-center mb-8">
-      {/* Heading */}
+      {/* Section heading */}
       <h2 className="m-10 text-3xl font-normal uppercase text-gray-800 mb-14 tracking-wide ">
         {t('heading')}
       </h2>
 
-      {/* Logos grid */}
+      {/* Grid container for press logos */}
       <div className="flex flex-wrap justify-between items-center gap-20 max-w-6xl mx-auto">
-         <img src={byrdieLogo} alt="Byrdie" className="h-8 sm:h-8 object-contain" />
+        {/* Individual press logos */}
+        <img src={byrdieLogo} alt="Byrdie" className="h-8 sm:h-8 object-contain" />
         <img src={allureLogo} alt="Allure" className="h-6 sm:h-8 object-contain" />
         <img src={vogueLogo} alt="Vogue" className="h-6 sm:h-8 object-contain" />
         <img src={peopleLogo} alt="People" className="h-6 sm:h-8 object-contain" />
         <img src={refineryLogo} alt="Refinery29" className="h-6 sm:h-8 object-contain" />
-        <img src={mindbodyLogo} alt="mindbodygreen" className="h-6 sm:h-8 object-contain" />
+        <img src={mindbodyLogo} alt="MindBodyGreen" className="h-6 sm:h-8 object-contain" />
       </div>
     </section>
   );

@@ -34,8 +34,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('token');
     setUser(null);
-    // Don't reload the whole page; let router handle redirect
-    // A good idea: use a redirect component where needed
+  
   };
 
   return (

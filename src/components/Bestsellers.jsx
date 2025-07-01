@@ -15,6 +15,7 @@ const Bestsellers = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Fetch bestseller products on component mount
     async function fetchBestsellers() {
       try {
         const res = await axios.get('http://localhost:5000/api/products/bestsellers');
@@ -33,23 +34,26 @@ const Bestsellers = () => {
   return (
     <section className="bg-white m-12 px-4 sm:px-6 lg:px-8 text-center">
       <h2 className="text-3xl font-normal text-gray-800 mb-8">{t('bestseller.title')}</h2>
-      
 
+      {/* Grid of bestseller products */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
         {products.map((product) => (
           <div
             key={product._id}
             className="bg-white shadow-md p-0 flex flex-col justify-between items-center text-center h-[500px]"
           >
+            {/* Product image with link to product page */}
             <div className="w-full h-auto overflow-hidden">
               <Link to={`/skincare/${categoryToSlug(product.category)}/product/${product.slug}`}>
                 <img src={product.imageUrl[0]} alt={product.name} className="w-full h-full object-cover" />
               </Link>
             </div>
+
+            {/* Product details and add to cart */}
             <div className="p-4 w-full flex flex-col justify-between flex-1">
               <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
 
-              {/* Ratings */}
+              {/* Star rating display */}
               <div className="flex justify-center mt-10 my-2">
                 {[...Array(5)].map((_, i) => (
                   <svg
@@ -63,6 +67,7 @@ const Bestsellers = () => {
                 ))}
               </div>
 
+              {/* Price and add to cart button */}
               <p className="text-gray-800 text-sm mb-3">
                 {t('bestseller.priceSymbol')}{product.price}
               </p>

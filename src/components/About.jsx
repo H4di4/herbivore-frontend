@@ -8,7 +8,8 @@ const About = () => {
   return (
     <section className="bg-white ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        {/* Left: Image */}
+        
+        {/* Left: About image */}
         <div className="w-full h-full">
           <img
             src={aboutImage}
@@ -17,7 +18,7 @@ const About = () => {
           />
         </div>
 
-        {/* Right: Content */}
+        {/* Right: Text content */}
         <div className="text-left">
           <h3 className="text-sm font-normal uppercase text-gray-800 ">
             {t('about.title')}
@@ -29,6 +30,7 @@ const About = () => {
             {t('about.description')}
           </p>
 
+          {/* Link to full about page */}
           <a
             href="/about"
             className="inline-block text-sm border outline-0 border-gray-400 px-8 py-2"

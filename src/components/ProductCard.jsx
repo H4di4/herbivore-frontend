@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { categoryToSlug } from '../utils/categorySlug';
+import Price from './Price';
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
@@ -53,10 +54,10 @@ export default function ProductCard({ product }) {
         {product.onSale && product.discountPrice ? (
           <div>
             <span className="text-gray-700 text-[16px]">${product.discountPrice.toFixed(2)}</span>
-            <span className="line-through text-black font-normal ml-2 text-[16px]">${product.price.toFixed(2)}</span>
+            <span className="line-through text-black font-normal ml-2 text-[16px]">  <Price amount={product.discountPrice} /></span>
           </div>
         ) : (
-          <p className="text-gray-800 text-sm mb-3">${product.price.toFixed(2)}</p>
+          <p className="text-gray-800 text-sm mb-3"> <Price amount={product.discountPrice} /></p>
         )}
 
         {/* Add to Cart button */}

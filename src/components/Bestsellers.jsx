@@ -5,6 +5,7 @@ import { useCart } from '../context/CartContext';
 import { useCurrency } from '../context/CurrencyContext';
 import { categoryToSlug } from '../utils/categorySlug';
 import { useTranslation } from 'react-i18next';
+import Price from './Price';
 
 const Bestsellers = () => {
   const { currency } = useCurrency();
@@ -69,7 +70,7 @@ const Bestsellers = () => {
 
               {/* Price and add to cart button */}
               <p className="text-gray-800 text-sm mb-3">
-                {t('bestseller.priceSymbol')}{product.price}
+                <Price amount={product.price} />
               </p>
 
               <button

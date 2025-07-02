@@ -6,6 +6,7 @@ import RelatedProducts from './RelatedProduct';
 import Newsletter from './Newsletter';
 import Footer from './Footer';
 import FAQSection from './FAQSection';
+import Price from './Price';
 
 // Image gallery with thumbnails and main image
 function ImageGallery({ images }) {
@@ -97,14 +98,14 @@ export default function ProductDetail() {
             {product.onSale && product.discountPrice ? (
               <div>
                 <span className="text-gray-700 text-xl">
-                  ${product.discountPrice.toFixed(2)}
+                 <Price amount={product.discountPrice} />
                 </span>
                 <span className="line-through text-black font-normal ml-6 text-sm">
-                  ${product.price.toFixed(2)}
+                  <Price amount={product.price} />
                 </span>
               </div>
             ) : (
-              <p className="text-lg">${product.price.toFixed(2)}</p>
+              <p className="text-lg"> <Price amount={product.price} /></p>
             )}
 
             {/* Add to Cart button */}

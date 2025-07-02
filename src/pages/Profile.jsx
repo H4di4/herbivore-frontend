@@ -54,7 +54,7 @@ const Profile = () => {
           to="/edit-profile"
           className="inline-block mt-3 px-4 py-2 border border-gray-400 text-sm hover:bg-[rgb(56,56,56)] hover:text-white "
         >
-         EDIT PROFILE
+          EDIT PROFILE
         </Link>
       </div>
 
@@ -99,7 +99,20 @@ const Profile = () => {
             </table>
           </div>
         ) : (
-          <p className="text-center text-gray-600">You have no orders yet.</p>
+          <>
+            <div className='mt-2 text-center'>
+
+
+              <p className="text-center text-gray-600">You have no orders yet.</p>
+              <Link
+                to="/skincare"
+                className="mt-4 inline-block px-6 py-2  bg-[rgb(56,56,56)] text-white  "
+              >
+                SHOP NOW
+              </Link>
+            </div>
+          </>
+
         )}
       </div>
     </div>

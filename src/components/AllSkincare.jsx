@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Newsletter from './Newsletter';
 import Footer from './Footer';
 import { categoryToSlug } from '../utils/categorySlug';
+import Price from './Price';  // <-- Import Price component
 
 const AllSkincare = () => {
   const { addToCart } = useCart();
@@ -19,8 +20,6 @@ const AllSkincare = () => {
         const res = await axios.get('http://localhost:5000/api/products');
         console.log('Products fetched:', res.data);
         setProducts(res.data);
-      
-
       } catch (err) {
         setError('Failed to load products. Please try again later.');
       } finally {
@@ -43,7 +42,7 @@ const AllSkincare = () => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
             {products.map((product) => {
-                console.log('Product slug:', product.slug);
+              console.log('Product slug:', product.slug);
               const isOnSale = product.onSale && product.discountPrice;
               const saveAmount = isOnSale ? (product.price - product.discountPrice).toFixed(2) : null;
 
@@ -60,9 +59,7 @@ const AllSkincare = () => {
                   )}
 
                   <div className="w-full h-auto overflow-hidden">
-                <Link to={`/skincare/${categoryToSlug(product.category)}/product/${product.slug}`}>
-
-
+                    <Link to={`/skincare/${categoryToSlug(product.category)}/product/${product.slug}`}>
                       <img
                         src={product.imageUrl[0]}
                         alt={product.name}
@@ -72,8 +69,7 @@ const AllSkincare = () => {
                   </div>
                   <div className="p-4 w-full flex flex-col justify-between flex-1">
                     <h3 className="text-sm font-medium text-gray-900 mt-2">
-                                    <Link to={`/skincare/${categoryToSlug(product.category)}/product/${product.slug}`}>
-
+                      <Link to={`/skincare/${categoryToSlug(product.category)}/product/${product.slug}`}>
                         {product.name}
                       </Link>
                     </h3>
@@ -95,11 +91,11 @@ const AllSkincare = () => {
                     {/* Price */}
                     {isOnSale ? (
                       <div className="mb-3">
-                        <span className="text-gray-700 text-[16px]">${product.discountPrice.toFixed(2)}</span>
-                        <span className="line-through text-black text-[16px] ml-2">${product.price.toFixed(2)}</span>
+                        <span className="text-gray-700 text-[16px]"><Price amount={product.discountPrice} /></span>
+                        <span className="line-through text-black text-[16px] ml-2"><Price amount={product.price} /></span>
                       </div>
                     ) : (
-                      <p className="text-gray-800 text-sm mb-3">${product.price.toFixed(2)}</p>
+                      <p className="text-gray-800 text-sm mb-3"><Price amount={product.price} /></p>
                     )}
 
                     {/* Add to Cart Button */}

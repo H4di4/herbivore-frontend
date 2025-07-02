@@ -21,6 +21,7 @@ import { categoryToSlug } from '../utils/categorySlug';
 import LanguageSelector from './LanguageSelector';
 import CurrencySelector from './CurrencySelector';
 import { AuthContext } from '../context/AuthContext';
+import Price from './Price';
 
 const Navbar = () => {
   const { cartItems, removeFromCart, updateQuantity, totalQuantity, totalPrice, cartOpen, setCartOpen } = useCart();
@@ -401,21 +402,21 @@ const Navbar = () => {
               </button>
 
               {open && (
-                <div className="absolute right-0 mt-2 w-48 uppercase bg-white border border-gray-200 z-50">
+                <div className="absolute right-0 mt-2 w-48 uppercase bg-white border border-gray-200 z-50 space-y-0">
 
 
                   <a
                     href="http://localhost:5173/login"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-2 text-[12px] text-gray-600  hover:text-black"
+                    className="block px-4 py-2 text-[12px] text-gray-600 uppercase hover:text-black"
                   >
                     Admin Panel
                   </a>
 
                   <button
                     onClick={() => navigate(user ? '/profile' : '/login')}
-                    className="block w-full text-left px-4 py-2 text-sm hover:text-black "
+                    className="block w-full text-left px-4 py-2 text-[12px] text-gray-600 uppercase hover:text-black "
                   >
                     My Orders
                   </button>
@@ -578,7 +579,7 @@ const Navbar = () => {
                     </div>
 
                     <p className="text-xs font-normal text-black ml-4">
-                      ${item.price}
+                     <Price amount={item.price} />
                     </p>
 
                     <button
@@ -615,7 +616,7 @@ const Navbar = () => {
                   <span>
                     {t("cart.subtotal")} ({totalQuantity} {totalQuantity === 1 ? t("cart.item") : t("cart.items")})
                   </span>
-                  <span>${totalPrice.toFixed(2)}</span>
+                  <span>  <Price amount={totalPrice} /></span>
                 </div>
                 <Link
                   to="/checkout"

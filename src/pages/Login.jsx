@@ -31,11 +31,19 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password }, { headers: { 'Content-Type': 'application/json' } });
       const { token } = res.data;
 
-      login(token); 
-      navigate('/profile'); 
+      login(token);
+
+      console.log('Login successful, navigating to profile...');
+      navigate('/profile');
+
+      console.log('Logging in with:', { email, password });
+      if (!email || !password) {
+        setError('Please enter both email and password');
+        return;
+      }
 
     } catch (err) {
       console.error(err.response?.data);

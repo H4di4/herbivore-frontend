@@ -38,7 +38,9 @@ export const CartProvider = ({ children }) => {
     } catch (err) {
       console.error('Failed to add item to cart:', err);
     }
+    
   }
+    setCartOpen(true);
 };
 
 

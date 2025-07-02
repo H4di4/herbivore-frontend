@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useCart } from '../context/CartContext';
+import Price from './Price';
 
 export default function RelatedProducts({ productId }) {
   const { addToCart } = useCart();          // Access cart context to add products
@@ -70,7 +71,7 @@ export default function RelatedProducts({ productId }) {
               </div>
 
               {/* Product Price */}
-              <p className="text-gray-800 text-sm mb-3">${product.price.toFixed(2)}</p>
+              <p className="text-gray-800 text-sm mb-3"> <Price amount={product.price} /></p>
 
               {/* Add to Cart Button */}
               <button

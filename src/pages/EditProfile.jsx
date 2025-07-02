@@ -74,7 +74,7 @@ const EditProfile = () => {
             name="firstName"
             value={user.firstName}
             onChange={handleChange}
-            className="mt-1 block w-full border border-gray-300 rounded px-3 py-2"
+            className="mt-1 block w-full border border-gray-300  px-3 py-2"
             required
           />
         </div>
@@ -85,14 +85,14 @@ const EditProfile = () => {
             name="lastName"
             value={user.lastName}
             onChange={handleChange}
-            className="mt-1 block w-full border border-gray-300 rounded px-3 py-2"
+            className="mt-1 block w-full border border-gray-300  px-3 py-2"
             required
           />
         </div>
 
         <button
           type="submit"
-          className="px-4 py-2 w-full bg-[rgb(56,56,56)] text-white rounded"
+          className="px-4 py-2 w-full bg-[rgb(56,56,56)] text-white "
         >
           Save
         </button>

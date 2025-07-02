@@ -3,7 +3,8 @@ import { useCurrency } from '../context/CurrencyContext';
 export default function Price({ amount }) {
   // Get current currency and exchange rates from context
   const { currency, exchangeRates } = useCurrency();
-  
+    console.log('Price.jsx:', { amount, currency, exchangeRates });  // <-- DEBUG HERE
+
   // Define base currency fallback (usually the currency the amount is originally in)
   const baseCurrency = 'USD';
 
